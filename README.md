@@ -55,7 +55,7 @@ Will be uploaded soon..
    npm run build
 2. Deploy on GitHub Pages:
    npm run deploy
-3. Access the app at: https://Piyush-Puthenpurakkal.github.io/pocket-note   
+3. Access the app at: https://Piyush-Puthenpurakkal.github.io/pocket-notes   
 
 ## 🤝 Contributions
 Contributions are welcome! Feel free to open an issue or PR.
