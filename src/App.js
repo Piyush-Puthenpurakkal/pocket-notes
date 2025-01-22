@@ -11,6 +11,7 @@ const App = () => {
 
   const [selectedGroup, setSelectedGroup] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [isSidebarOpen, setSidebarOpen] = useState(true);
 
   useEffect(() => {
     localStorage.setItem("groups", JSON.stringify(groups));
@@ -86,6 +87,10 @@ const App = () => {
     setSelectedGroup(updatedSelectedGroup);
   };
 
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <div className="container">
       <Sidebar
@@ -93,9 +98,15 @@ const App = () => {
         selectedGroup={selectedGroup}
         onGroupSelect={setSelectedGroup}
         onCreateClick={() => setShowModal(true)}
+        isSidebarOpen={isSidebarOpen}
+        toggleSidebar={toggleSidebar}
       />
 
-      <NotesArea selectedGroup={selectedGroup} onAddNote={handleAddNote} />
+      <NotesArea
+        selectedGroup={selectedGroup}
+        onAddNote={handleAddNote}
+        isSidebarOpen={isSidebarOpen}
+      />
 
       {showModal && (
         <CreateGroupModal

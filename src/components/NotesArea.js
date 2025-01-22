@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import Image from "../assets/image-removebg-preview.png";
 
-const NotesArea = ({ selectedGroup, onAddNote }) => {
+const NotesArea = ({ selectedGroup, onAddNote, isSidebarOpen }) => {
   const [noteText, setNoteText] = useState("");
 
   const handleSubmit = (e) => {
@@ -21,7 +23,11 @@ const NotesArea = ({ selectedGroup, onAddNote }) => {
 
   if (!selectedGroup) {
     return (
-      <div className="notes-empty-state">
+      <div
+        className={`notes-empty-state ${
+          isSidebarOpen ? "with-sidebar" : "without-sidebar"
+        }`}
+      >
         <div className="notes-image">
           <img
             src={Image}
@@ -40,7 +46,11 @@ const NotesArea = ({ selectedGroup, onAddNote }) => {
   }
 
   return (
-    <div className="notes-area">
+    <div
+      className={`notes-area ${
+        isSidebarOpen ? "with-sidebar" : "without-sidebar"
+      }`}
+    >
       <div className="notes-header">
         <div
           className="group-circle"
@@ -61,20 +71,22 @@ const NotesArea = ({ selectedGroup, onAddNote }) => {
       </div>
 
       <form onSubmit={handleSubmit} className="add-note-form">
-        <textarea
-          value={noteText}
-          onChange={(e) => setNoteText(e.target.value)}
-          placeholder="Enter your note here..."
-          className="add-note-textarea"
-          onKeyPress={handleKeyPress}
-        />
-        <button
-          type="submit"
-          disabled={!noteText.trim()}
-          className={`add-note-button ${!noteText.trim() ? "disabled" : ""}`}
-        >
-          ➤
-        </button>
+        <div className="textarea-container">
+          <textarea
+            value={noteText}
+            onChange={(e) => setNoteText(e.target.value)}
+            placeholder="Enter your note here..."
+            className="add-note-textarea"
+            onKeyPress={handleKeyPress}
+          />
+          <button
+            type="submit"
+            disabled={!noteText.trim()}
+            className={`textarea-button ${!noteText.trim() ? "disabled" : ""}`}
+          >
+            <FontAwesomeIcon icon={faPaperPlane} />
+          </button>
+        </div>
       </form>
     </div>
   );
