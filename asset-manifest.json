@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/pocket-notes/static/css/main.c808d103.css",
-    "main.js": "/pocket-notes/static/js/main.4dd00cfb.js",
+    "main.css": "/pocket-notes/static/css/main.f29830f9.css",
+    "main.js": "/pocket-notes/static/js/main.d2b6140c.js",
     "static/media/image-removebg-preview.png": "/pocket-notes/static/media/image-removebg-preview.051c5dd6cf08bd17366f.png",
     "index.html": "/pocket-notes/index.html",
-    "main.c808d103.css.map": "/pocket-notes/static/css/main.c808d103.css.map",
-    "main.4dd00cfb.js.map": "/pocket-notes/static/js/main.4dd00cfb.js.map"
+    "main.f29830f9.css.map": "/pocket-notes/static/css/main.f29830f9.css.map",
+    "main.d2b6140c.js.map": "/pocket-notes/static/js/main.d2b6140c.js.map"
   },
   "entrypoints": [
-    "static/css/main.c808d103.css",
-    "static/js/main.4dd00cfb.js"
+    "static/css/main.f29830f9.css",
+    "static/js/main.d2b6140c.js"
   ]
 }
