@@ -59,7 +59,7 @@ const App = () => {
         minute: "2-digit",
         hour12: true,
       })
-      .replace(",", " ∙");
+      .replace(",", " •");
 
     const updatedGroups = groups.map((group) => {
       if (group.id === selectedGroup.id) {

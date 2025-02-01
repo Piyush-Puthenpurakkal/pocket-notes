@@ -39,19 +39,19 @@ const CreateGroupModal = ({ onClose, onCreate }) => {
       <div ref={modalRef} className="modal-content">
         <h2 className="modal-header">Create New Group</h2>
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className="group-name">
             <label>Group Name</label>
             <input
               type="text"
               value={groupName}
               onChange={(e) => setGroupName(e.target.value)}
-              className="add-note-textarea"
+              className="add-group-name"
               placeholder="Enter group name"
             />
           </div>
 
           <div className="color-picker">
-            <label>Choose color</label>
+            <label className="choose-color">Choose color</label>
             {COLORS.map((color) => (
               <div
                 key={color}
@@ -64,9 +64,11 @@ const CreateGroupModal = ({ onClose, onCreate }) => {
             ))}
           </div>
 
-          <button type="submit" className="modal-button">
-            Create
-          </button>
+          <div className="modal-buttons">
+            <button type="submit" className="modal-button">
+              Create
+            </button>
+          </div>
         </form>
       </div>
     </div>

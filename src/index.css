@@ -58,11 +58,11 @@ body {
 }
 
 .sidebar-header {
+  margin-top: 20px;
   padding: 20px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
-  border-bottom: 1px solid #ddd;
 }
 
 .sidebar-group {
@@ -70,7 +70,13 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
+  font-weight: bold;
   transition: background-color 0.3s ease;
+}
+
+.sidebar-group.active-chat {
+  background-color: #f0f0f0;
+  border-radius: 15px;
 }
 
 .sidebar-group:hover {
@@ -95,9 +101,9 @@ body {
   left: 180px;
   width: 50px;
   height: 50px;
-  background-color: #007bff;
+  background-color: #04097b;
   color: #fff;
-  font-size: 24px;
+  font-size: 35px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -116,7 +122,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: #fafafa;
+  background-color: #eaf3ff;
   overflow: hidden;
   margin-left: 250px;
   transition: margin-left 0.3s ease-in-out;
@@ -129,7 +135,7 @@ body {
 .notes-header {
   display: flex;
   align-items: center;
-  background-color: #007bff;
+  background-color: #0d1b75;
   color: white;
   padding: 15px 20px;
   font-size: 18px;
@@ -147,12 +153,13 @@ body {
 /* Note Item */
 .note-item {
   position: relative;
-  background-color: #f9f9f9;
+  background-color: white;
   padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  border: 1px solid white;
+  border-radius: 4px;
   margin-bottom: 10px;
   padding-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .note-item p {
@@ -182,23 +189,25 @@ body {
   display: flex;
   padding: 15px;
   border-top: 1px solid #ddd;
-  background-color: #007bff;
+  background-color: #0d1b75;
+  border-radius: 0 0 0 15px;
 }
 
 .add-note-textarea {
   border: 1px solid #ddd;
-  border-radius: 18px;
+  border-radius: 10px;
   flex: 1 1;
   font-size: 14px;
   padding: 10px;
+  height: 100px;
 }
 
 .textarea-button {
   position: absolute;
   right: 15px;
-  top: 50%;
+  bottom: -10px;
   transform: translateY(-50%);
-  background-color: #007bff;
+  background-color: #0d1b75;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -280,7 +289,7 @@ body {
 .sidebar,
 .notes-list {
   scrollbar-width: thin;
-  scrollbar-color: white transparent;
+  scrollbar-color: grey transparent;
 }
 
 .sidebar::-webkit-scrollbar,
@@ -343,8 +352,8 @@ body {
 }
 
 .modal-button {
-  padding: 10px 20px;
-  background-color: #007bff;
+  padding: 5px 30px;
+  background-color: #0d1b75;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -383,4 +392,29 @@ body {
     width: 30px;
     height: 30px;
   }
+}
+
+.group-name {
+  margin-bottom: 30px;
+}
+
+.add-group-name {
+  border: 1px solid grey;
+  border-radius: 18px;
+  flex: 1 1;
+  font-size: 14px;
+  padding: 10px;
+  margin-left: 20px;
+  width: 250px;
+}
+
+.choose-color {
+  margin-right: 20px;
+  padding-top: 9px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
 }

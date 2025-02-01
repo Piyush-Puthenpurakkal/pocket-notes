@@ -28,7 +28,7 @@ const Sidebar = ({ groups, selectedGroup, onGroupSelect, onCreateClick }) => {
             <div
               key={group.id}
               className={`sidebar-group ${
-                selectedGroup?.id === group.id ? "selected-group" : ""
+                selectedGroup?.id === group.id ? "active-chat" : ""
               }`}
               onClick={() => onGroupSelect(group)}
             >
